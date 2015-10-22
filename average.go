@@ -6,21 +6,9 @@
 
 package math
 
-import (
-	"time"
-)
-
 // AvgInt64 calculates the average of the values in the slice.
 func AvgInt64(values []int64) float64 {
 	var sum int64
-	for _, val := range values {
-		sum += val
-	}
-	return float64(sum) / float64(len(values))
-}
-
-func AvgDuration(values []time.Duration) float64 {
-	var sum time.Duration
 	for _, val := range values {
 		sum += val
 	}
