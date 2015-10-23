@@ -5,8 +5,8 @@
 package math
 
 import (
-	"time"
 	"math"
+	"time"
 )
 
 func MinDuration(values []time.Duration) time.Duration {
@@ -37,13 +37,12 @@ func AvgDuration(values []time.Duration) float64 {
 	return float64(sum) / float64(len(values))
 }
 
-
 func StdDevDuration(values []time.Duration) float64 {
 	// StdDevDuration: amostral
 	mean := AvgDuration(values)
 	var sum float64
 	for _, val := range values {
-		sum += (float64(val) - mean)*(float64(val) - mean)
+		sum += (float64(val) - mean) * (float64(val) - mean)
 	}
-	return math.Sqrt((1.0 / float64(len(values) - 1)) * sum)
+	return math.Sqrt((1.0 / float64(len(values)-1)) * sum)
 }
